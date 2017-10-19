@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcoWiseModelStoreContainer" CdmEntityContainer="EcoWiseEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="EcoWiseModel.Address">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Suite" ColumnName="Suite" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeCrews">
+      <EntityTypeMapping TypeName="EcoWiseModel.EmployeeCrew">
+        <MappingFragment StoreEntitySet="EmployeeCrews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CrewName" ColumnName="CrewName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EcoWiseModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DefaultPay" ColumnName="DefaultPay" />
+          <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeTypes">
+      <EntityTypeMapping TypeName="EcoWiseModel.EmployeeType">
+        <MappingFragment StoreEntitySet="EmployeeTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="DefaultPay" ColumnName="DefaultPay" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeWorkTimes">
+      <EntityTypeMapping TypeName="EcoWiseModel.EmployeeWorkTime">
+        <MappingFragment StoreEntitySet="EmployeeWorkTimes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="WorkDate" ColumnName="WorkDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobDetails">
+      <EntityTypeMapping TypeName="EcoWiseModel.JobDetail">
+        <MappingFragment StoreEntitySet="JobDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Wall" ColumnName="Wall" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="OptionNo" ColumnName="OptionNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Multiple" ColumnName="Multiple" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Strokes" ColumnName="Strokes" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="EcoWiseModel.Job">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ProposalNo" ColumnName="ProposalNo" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="OwnerAddressId" ColumnName="OwnerAddressId" />
+          <ScalarProperty Name="ContractorAddressId" ColumnName="ContractorAddressId" />
+          <ScalarProperty Name="ProjectAddressId" ColumnName="ProjectAddressId" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="JobPrice" ColumnName="JobPrice" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSegments">
+      <EntityTypeMapping TypeName="EcoWiseModel.JobSegment">
+        <MappingFragment StoreEntitySet="JobSegments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="SegmentDate" ColumnName="SegmentDate" />
+          <ScalarProperty Name="MachineId" ColumnName="MachineId" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartClicks" ColumnName="StartClicks" />
+          <ScalarProperty Name="EndClicks" ColumnName="EndClicks" />
+          <ScalarProperty Name="EmployeeCrewId" ColumnName="EmployeeCrewId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialPurchases">
+      <EntityTypeMapping TypeName="EcoWiseModel.MaterialPurchas">
+        <MappingFragment StoreEntitySet="MaterialPurchases">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="UnitCount" ColumnName="UnitCount" />
+          <ScalarProperty Name="PricePerUnit" ColumnName="PricePerUnit" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="EcoWiseModel.Material">
+        <MappingFragment StoreEntitySet="Materials">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Material1" ColumnName="Material" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_EmployeeCrews">
+      <EntityTypeMapping TypeName="EcoWiseModel.Employee_EmployeeCrews">
+        <MappingFragment StoreEntitySet="Employee_EmployeeCrews">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="EmployeeCrewId" ColumnName="EmployeeCrewId" />
+          <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_EmployeeTypes">
+      <EntityTypeMapping TypeName="EcoWiseModel.Employee_EmployeeTypes">
+        <MappingFragment StoreEntitySet="Employee_EmployeeTypes">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

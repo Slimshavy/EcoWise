@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EcoWise/bin/Debug
+/packages/EntityFramework.6.1.3

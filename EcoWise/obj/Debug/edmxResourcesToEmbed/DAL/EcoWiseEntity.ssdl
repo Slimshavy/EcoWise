@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcoWiseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HouseNumber" Type="int" Nullable="false" />
+    <Property Name="StreetName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Suite" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="State" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Zip" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EcoWise.dbo.Employee_EmployeeCrews' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee_EmployeeCrews">
+    <Key>
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="UpdatedOn" />
+      <PropertyRef Name="UpdatedBy" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="EmployeeCrewId" Type="int" />
+    <Property Name="EmployeeTypeId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EcoWise.dbo.Employee_EmployeeTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee_EmployeeTypes">
+    <Key>
+      <PropertyRef Name="CreatedOn" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="UpdatedOn" />
+      <PropertyRef Name="UpdatedBy" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="EmployeeTypeId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeCrews">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CrewName" Type="varchar" MaxLength="255" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DefaultPay" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="10" />
+    <Property Name="AddressId" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobType" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DefaultPay" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeWorkTimes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="WorkDate" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Wall" Type="varchar" MaxLength="255" />
+    <Property Name="Type" Type="varchar" MaxLength="255" />
+    <Property Name="OptionNo" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Length" Type="numeric" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Height" Type="numeric" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Depth" Type="numeric" Precision="6" Scale="3" Nullable="false" />
+    <Property Name="Multiple" Type="int" Nullable="false" />
+    <Property Name="Material" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Price" Type="numeric" Precision="3" Scale="2" Nullable="false" />
+    <Property Name="Strokes" Type="numeric" Precision="6" Scale="3" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ProposalNo" Type="varchar" MaxLength="255" />
+    <Property Name="DiscountPercent" Type="numeric" Precision="6" Scale="3" />
+    <Property Name="OwnerAddressId" Type="int" Nullable="false" />
+    <Property Name="ContractorAddressId" Type="int" Nullable="false" />
+    <Property Name="ProjectAddressId" Type="int" Nullable="false" />
+    <Property Name="DiscountAmount" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="JobPrice" Type="numeric" Precision="7" Scale="2" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobSegments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="SegmentDate" Type="datetime" Nullable="false" />
+    <Property Name="MachineId" Type="int" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="StartClicks" Type="int" Nullable="false" />
+    <Property Name="EndClicks" Type="int" />
+    <Property Name="EmployeeCrewId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaterialPurchases">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialId" Type="int" Nullable="false" />
+    <Property Name="UnitCount" Type="int" Nullable="false" />
+    <Property Name="PricePerUnit" Type="numeric" Precision="7" Scale="2" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Materials">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Material" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Employee_EmployeeCrews_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Employee_EmployeeCrews" Type="Self.Employee_EmployeeCrews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_EmployeeCrews">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeCrews_EmployeeCrew">
+    <End Role="EmployeeCrews" Type="Self.EmployeeCrews" Multiplicity="0..1" />
+    <End Role="Employee_EmployeeCrews" Type="Self.Employee_EmployeeCrews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeCrews">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_EmployeeCrews">
+        <PropertyRef Name="EmployeeCrewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeCrews_EmployeeType">
+    <End Role="EmployeeTypes" Type="Self.EmployeeTypes" Multiplicity="0..1" />
+    <End Role="Employee_EmployeeCrews" Type="Self.Employee_EmployeeCrews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_EmployeeCrews">
+        <PropertyRef Name="EmployeeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeTypes_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="Employee_EmployeeTypes" Type="Self.Employee_EmployeeTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_EmployeeTypes">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_EmployeeTypes_EmployeeType">
+    <End Role="EmployeeTypes" Type="Self.EmployeeTypes" Multiplicity="0..1" />
+    <End Role="Employee_EmployeeTypes" Type="Self.Employee_EmployeeTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployeeTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee_EmployeeTypes">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeWorkTimes_Employee">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="EmployeeWorkTimes" Type="Self.EmployeeWorkTimes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeWorkTimes">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDetails_Job">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+    <End Role="JobDetails" Type="Self.JobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobDetails">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_ContractorAddress">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ContractorAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_OwnerAddress">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="OwnerAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_ProjectAddress">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ProjectAddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobSegments_Job">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+    <End Role="JobSegments" Type="Self.JobSegments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobSegments">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MaterialPurchases_Material">
+    <End Role="Materials" Type="Self.Materials" Multiplicity="1" />
+    <End Role="MaterialPurchases" Type="Self.MaterialPurchases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materials">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MaterialPurchases">
+        <PropertyRef Name="MaterialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcoWiseModelStoreContainer">
+    <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeCrews" EntityType="Self.EmployeeCrews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeTypes" EntityType="Self.EmployeeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeWorkTimes" EntityType="Self.EmployeeWorkTimes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobDetails" EntityType="Self.JobDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobSegments" EntityType="Self.JobSegments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaterialPurchases" EntityType="Self.MaterialPurchases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Materials" EntityType="Self.Materials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_EmployeeCrews" EntityType="Self.Employee_EmployeeCrews" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee_EmployeeCrews].[EmployeeId] AS [EmployeeId], 
+    [Employee_EmployeeCrews].[EmployeeCrewId] AS [EmployeeCrewId], 
+    [Employee_EmployeeCrews].[EmployeeTypeId] AS [EmployeeTypeId], 
+    [Employee_EmployeeCrews].[CreatedOn] AS [CreatedOn], 
+    [Employee_EmployeeCrews].[CreatedBy] AS [CreatedBy], 
+    [Employee_EmployeeCrews].[UpdatedOn] AS [UpdatedOn], 
+    [Employee_EmployeeCrews].[UpdatedBy] AS [UpdatedBy]
+    FROM [dbo].[Employee_EmployeeCrews] AS [Employee_EmployeeCrews]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employee_EmployeeTypes" EntityType="Self.Employee_EmployeeTypes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee_EmployeeTypes].[EmployeeId] AS [EmployeeId], 
+    [Employee_EmployeeTypes].[EmployeeTypeId] AS [EmployeeTypeId], 
+    [Employee_EmployeeTypes].[CreatedOn] AS [CreatedOn], 
+    [Employee_EmployeeTypes].[CreatedBy] AS [CreatedBy], 
+    [Employee_EmployeeTypes].[UpdatedOn] AS [UpdatedOn], 
+    [Employee_EmployeeTypes].[UpdatedBy] AS [UpdatedBy]
+    FROM [dbo].[Employee_EmployeeTypes] AS [Employee_EmployeeTypes]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Employee_EmployeeCrews_Employee" Association="Self.FK_Employee_EmployeeCrews_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employee_EmployeeCrews" EntitySet="Employee_EmployeeCrews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeCrews_EmployeeCrew" Association="Self.FK_Employee_EmployeeCrews_EmployeeCrew">
+      <End Role="EmployeeCrews" EntitySet="EmployeeCrews" />
+      <End Role="Employee_EmployeeCrews" EntitySet="Employee_EmployeeCrews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeCrews_EmployeeType" Association="Self.FK_Employee_EmployeeCrews_EmployeeType">
+      <End Role="EmployeeTypes" EntitySet="EmployeeTypes" />
+      <End Role="Employee_EmployeeCrews" EntitySet="Employee_EmployeeCrews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeTypes_Employee" Association="Self.FK_Employee_EmployeeTypes_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employee_EmployeeTypes" EntitySet="Employee_EmployeeTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_EmployeeTypes_EmployeeType" Association="Self.FK_Employee_EmployeeTypes_EmployeeType">
+      <End Role="EmployeeTypes" EntitySet="EmployeeTypes" />
+      <End Role="Employee_EmployeeTypes" EntitySet="Employee_EmployeeTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeWorkTimes_Employee" Association="Self.FK_EmployeeWorkTimes_Employee">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeeWorkTimes" EntitySet="EmployeeWorkTimes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDetails_Job" Association="Self.FK_JobDetails_Job">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobDetails" EntitySet="JobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_ContractorAddress" Association="Self.FK_Jobs_ContractorAddress">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_OwnerAddress" Association="Self.FK_Jobs_OwnerAddress">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_ProjectAddress" Association="Self.FK_Jobs_ProjectAddress">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobSegments_Job" Association="Self.FK_JobSegments_Job">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobSegments" EntitySet="JobSegments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MaterialPurchases_Material" Association="Self.FK_MaterialPurchases_Material">
+      <End Role="Materials" EntitySet="Materials" />
+      <End Role="MaterialPurchases" EntitySet="MaterialPurchases" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

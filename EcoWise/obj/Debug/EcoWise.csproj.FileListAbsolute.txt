@@ -1,0 +1,14 @@
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EcoWise.exe.config
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EcoWise.exe
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EcoWise.pdb
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EntityFramework.dll
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EntityFramework.xml
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.csprojResolveAssemblyReference.cache
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.WorkForm.resources
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.Properties.Resources.resources
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.csproj.GenerateResource.Cache
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.csproj.CoreCompileInputs.cache
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.exe
+C:\Users\Mushky\source\repos\EcoWise\EcoWise\obj\Debug\EcoWise.pdb
